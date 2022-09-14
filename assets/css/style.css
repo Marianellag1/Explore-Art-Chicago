@@ -5,14 +5,10 @@
     box-sizing: border-box;
     /* background-color: #ef9a9a; */
 }
-div h1 {
-    background-color: #b71c1c;
-    line-height: 100%;
-}
 
-header {
-    background-color: #b71c1c;
-    font-family: Aclonica;
+.nav-wrapper {
+    background-color: #607d8b;
+    font-family: Aclonia;
 }
 
 .row {

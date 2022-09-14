@@ -1,7 +1,17 @@
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
+$(document).ready(function(){
+ 
+    $('.carousel').carousel({
+        fullWidth: true,
+        indicators: true
+    });
+    
+     setInterval(function() {
+    
+       $('.carousel-slider').carousel('next');
+    
+     }, 3000);   
+
+   });
 
 let searchBtn = $('#search-button');
 let userInput = $('#usersearch');
