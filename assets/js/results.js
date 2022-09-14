@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.materialboxed');
 //     var instances = M.Materialbox.init(elems, options);
@@ -14,7 +13,6 @@ useEffect(() => {
   var elems = document.querySelectorAll(".materialboxed");
   M.Materialbox.init(elems);
 }, []);
-=======
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.materialboxed');
     var instances = M.Materialbox.init(elems, options);
@@ -32,4 +30,3 @@ fetch(apiUrl)
 console.log(apiUrl);
 
 //    var instance = M.Materialbox.getInstance(elem);
->>>>>>> 4796d2cfb59aeba75a2de87c3c0829a218e5c150
