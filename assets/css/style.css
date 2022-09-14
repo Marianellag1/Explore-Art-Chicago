@@ -13,8 +13,9 @@ header {
       margin-top: 230px;
       margin-left: 400px;
       width: 65%;
-      border: 20px;
-      border-color: blue-grey;
+      border: 50px;
+      border-color: rgb(66, 96, 178);
+      border-radius: 20px;
 }
 
 .card1 {
