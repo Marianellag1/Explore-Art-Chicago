@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra&display=swap');
+
 header {
     position: relative;
     height: 200px;
     align-items: center;
     padding: 10px;
+    background-color: #b71c1c;
+    font-family: Almendra;
 }
 
 .carousel {
