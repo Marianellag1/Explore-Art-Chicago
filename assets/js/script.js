@@ -9,7 +9,7 @@ let userInput = $('#usersearch');
 function getArtworks(event){
     event.preventDefault();
     let userSearch = userInput.val();
-    console.log(userSearch);
+    location.replace('./results.html?'+`q=${userSearch}`)
 }
 
 searchBtn.on('click', getArtworks)
