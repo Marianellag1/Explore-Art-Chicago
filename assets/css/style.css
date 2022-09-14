@@ -1,32 +1,23 @@
-header {
-    position: relative;
-    height: 200px;
-    align-items: center;
-    padding: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Almendra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Almendra&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* background-color: #ef9a9a; */
+}
+
+.nav-wrapper {
+    background-color: #607d8b;
+    font-family: Aclonia;
+}
+
+.row {
+    background-color: #ef9a9a;
 }
 
 .carousel {
-    display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      position: absolute;
-      margin-top: 210px;
-      margin-left: 325px;
-      width: 70%;
-      border: 5px;
-      border-color: #607d8b;
-      border-radius: 20px;
-      border-style: solid;
-}
-
-.card1 {
-    width: 20%;
-    position: relative;
-    margin-left: 10px;
-}
-
-.card2 {
-    width: 20%;
-    position: relative;
-    margin-left: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #607d8b;
+    border: 20px;
 }
