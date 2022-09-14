@@ -13,6 +13,8 @@ header {
       margin-top: 230px;
       margin-left: 400px;
       width: 65%;
+      border: 20px;
+      border-color: blue-grey;
 }
 
 .card1 {
