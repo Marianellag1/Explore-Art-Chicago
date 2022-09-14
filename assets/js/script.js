@@ -14,3 +14,4 @@ function getArtworks(event){
 }
 
 searchBtn.on('click', getArtworks)
+
