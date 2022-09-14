@@ -1,6 +1,6 @@
 header {
     position: relative;
-    height: 220px;
+    height: 200px;
     align-items: center;
     padding: 10px;
 }
@@ -10,11 +10,11 @@ header {
       flex-direction: column;
       justify-content: space-around;
       position: absolute;
-      margin-top: 230px;
-      margin-left: 400px;
-      width: 65%;
-      border: 10px;
-      border-color: rgb(52, 71, 125);
+      margin-top: 210px;
+      margin-left: 325px;
+      width: 70%;
+      border: 5px;
+      border-color: #607d8b;
       border-radius: 20px;
       border-style: solid;
 }
