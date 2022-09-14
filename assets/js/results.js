@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.materialboxed');
 //     var instances = M.Materialbox.init(elems, options);
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Materialbox.init(elems, options);
   });
   
+=======
+>>>>>>> de281904c8bdd08be751e99625e4ab03cc73e9af
 let userQuery = location.search.split('=').pop();
 let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view`
 fetch(apiUrl)
@@ -29,4 +32,10 @@ fetch(apiUrl)
 })
 console.log(apiUrl);
 
+<<<<<<< HEAD
 //    var instance = M.Materialbox.getInstance(elem);
+=======
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+>>>>>>> de281904c8bdd08be751e99625e4ab03cc73e9af
