@@ -1,7 +1,28 @@
 header {
     position: relative;
-    top: px;
     height: 220px;
     align-items: center;
     padding: 10px;
+}
+
+.carousel {
+    display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      margin-top: 230px;
+      margin-left: 400px;
+      width: 65%;
+}
+
+.card1 {
+    width: 20%;
+    position: relative;
+    margin-left: 10px;
+}
+
+.card2 {
+    width: 20%;
+    position: relative;
+    margin-left: 10px;
 }
