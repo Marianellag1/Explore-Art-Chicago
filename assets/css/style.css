@@ -9,6 +9,7 @@
 .nav-wrapper {
     background-color: #646d58;
     font-family: Aclonia;
+    font-size: 200%;
 }
 
 .card {
@@ -17,6 +18,11 @@
 
 .row {
     background-color: #fefcbf;
+}
+
+.carousel:hover {
+    border:2px solid ;  
+    box-shadow: 0 0 10px #333; 
 }
 
 /* .carousel {
