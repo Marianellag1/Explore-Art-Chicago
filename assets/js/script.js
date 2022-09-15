@@ -15,6 +15,7 @@ $(document).ready(function () {
 
 let searchBtn = $('#search-button');
 let userInput = $('#usersearch');
+let carouselImages = $('.carousel')
 
 function getArtworks(event) {
   event.preventDefault();
@@ -23,5 +24,11 @@ function getArtworks(event) {
   userInput.val("");
 }
 
-searchBtn.on('click', getArtworks)
+function getArtCarousel(e){
+  e.preventDefault();
+  let imageID = $(e.target)
+  console.log(imageID);
+}
+carouselImages.on('click', getArtCarousel);
+searchBtn.on('click', getArtworks);
 
