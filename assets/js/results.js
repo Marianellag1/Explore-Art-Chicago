@@ -12,3 +12,10 @@ console.log(apiUrl);
 $(document).ready(function () {
     $('.materialboxed').materialbox();
 });
+
+
+// document.addEventListener("click",function(){
+//     alert("it works");
+//     var goBack = document.getElementById("back-btn");
+//     window.history.back()
+// })
