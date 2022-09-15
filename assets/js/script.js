@@ -26,8 +26,8 @@ function getArtworks(event) {
 
 function getArtCarousel(e){
   e.preventDefault();
-  let imageID = $(e.target)
-  console.log(imageID);
+  let imageName = $(e.target)[0].alt
+  location.assign('./results.html?' + `q=${imageName}`)
 }
 carouselImages.on('click', getArtCarousel);
 searchBtn.on('click', getArtworks);
