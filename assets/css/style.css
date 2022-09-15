@@ -23,6 +23,10 @@
     border: 20px;
 }
 
+.img-center { 
+    margin: 10px auto;
+}
+
 @media screen and (max-width:567px){
  nav{
     height:200px;
