@@ -19,6 +19,11 @@
     background-color: #fefcbf;
 }
 
+.carousel:hover {
+    border:2px solid ;  
+    box-shadow: 0 0 10px #333; 
+}
+
 /* .carousel {
     border-style: solid;
     border-radius: 50px;
