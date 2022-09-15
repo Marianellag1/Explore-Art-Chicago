@@ -7,24 +7,23 @@
 }
 
 .nav-wrapper {
-    background-color: #2a6fdb;
+    background-color: #646d58;
     font-family: Aclonia;
-
 }
 
 .card {
-    background-color: #48d6d2;
+    background-color: #b7cf84;
 }
 
 .row {
     background-color: #fefcbf;
 }
 
-.carousel {
+/* .carousel {
     border-style: solid;
     border-radius: 50px;
     border-color: #607d8b;
-}
+} */
 
 .img-center { 
     margin: 10px auto;
