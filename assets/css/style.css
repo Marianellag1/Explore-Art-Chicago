@@ -9,6 +9,7 @@
 .nav-wrapper {
     background-color: #607d8b;
     font-family: Aclonia;
+
 }
 
 .row {
@@ -20,4 +21,11 @@
     border-radius: 10px;
     border-color: #607d8b;
     border: 20px;
+}
+
+@media screen and (max-width:567px){
+ nav{
+    height:200px;
+    width:100%;
+ }   
 }
