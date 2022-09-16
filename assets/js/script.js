@@ -26,15 +26,22 @@ function getArtworks(event) {
     prevSearch.push(userInput.val());
   }
   localStorage.setItem("userInput", JSON.stringify(prevSearch));
-  location.assign('./results.html?' + `q=${userSearch}`)
+  location.assign('./results.html?' + `q=${userSearch}`);
   userInput.val("");
 }
 
 function getArtCarousel(e){
   e.preventDefault();
-  let imageName = $(e.target)[0].alt
-  location.assign('./results.html?' + `q=${imageName}`)
+  let imageName = $(e.target)[0].alt;
+  location.assign('./results.html?' + `q=${imageName}`);
 }
+$(function(){
+  let searchHistory = JSON.parse(localStorage.getItem("userInput"));
+  console.log(searchHistory);
+  $('#usersearch').autocomplete({
+    source: searchHistory
+  });
+});
 carouselImages.on('click', getArtCarousel);
 searchBtn.on('click', getArtworks);
 
