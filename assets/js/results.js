@@ -1,5 +1,5 @@
 let userQuery = location.search.split('=').pop();
-let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view&limit=3`
+let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view&limit=5`
 let artworkDisplay = $('#related-art');
 let artistBio = $('#artist-info');
    
