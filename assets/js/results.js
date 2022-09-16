@@ -25,8 +25,8 @@ let artistBio = $('#artist-info');
                 galTitle = results.data[i].gallery_title;
             }
             let bioCard = $('<div>', {
-                class: 'card-panel teal col s12 m12 l12',
-                style: 'background-color: #b7cf84!important'
+                class: 'card-panel col s12 m10 l10 push-m1 push-l1',
+                style: 'background-color: #b7cf84'
             })
             let artworkTitle = $('<p>').text(`Title: ${title}`)
             let artworkLocation = $('<p>').text(`Displayed at: ${galTitle}`);
