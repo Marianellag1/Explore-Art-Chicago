@@ -8,7 +8,6 @@ let artistBio = $('#artist-info');
         return response.json();
     })
     .then(function (results) {
-        console.log(results.data);
         for(let i = 0; i < results.data.length; i++){
             let artist = $('<h4>').text(results.data[i].artist_display);
             let title = results.data[i].title;
@@ -41,12 +40,6 @@ let artistBio = $('#artist-info');
             artworkDisplay.append(bioCard);
         }
     })
-console.log(apiUrl);
-
-// $(document).ready(function () {
-//     $('.materialboxed').materialbox();
-// });
-
 artworkDisplay.on('click', '.materialboxed',function(){
     $('.materialboxed').materialbox();
 })

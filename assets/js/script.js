@@ -36,9 +36,8 @@ function getArtCarousel(e){
 }
 $(document).ready(function(){
   let searchHistory = JSON.parse(localStorage.getItem('userInput'));
-  console.log(searchHistory)
   for(let i = 0; i < searchHistory.length; i++){
-    let searchAgain = $('<p>').text(searchHistory[i]);
+    let searchAgain = $('<button>').text(searchHistory[i]);
     searchAgain.attr('class', 'btn prev-btns')
     historyButtons.append(searchAgain);
   }
@@ -46,9 +45,7 @@ $(document).ready(function(){
 carouselImages.on('click', getArtCarousel);
 searchBtn.on('click', getArtworks);
 historyButtons.on('click', '.prev-btns', function(ev){
-  console.log('hello');
   userInput.val($(ev.target).text());
   getArtworks();
 });
 
-$('.dropdown-trigger').dropdown();
