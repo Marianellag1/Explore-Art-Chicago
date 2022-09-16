@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('.carousel').carousel({
     fullWidth: true,
     indicators: true
@@ -10,7 +9,6 @@ $(document).ready(function () {
     $('.carousel-slider').carousel('next');
 
   }, 3000);
-
 });
 
 let searchBtn = $('#search-button');
@@ -34,18 +32,22 @@ function getArtCarousel(e){
   let imageName = $(e.target)[0].alt;
   location.assign('./results.html?' + `q=${imageName}`);
 }
+
 $(document).ready(function(){
   let searchHistory = JSON.parse(localStorage.getItem('userInput'));
   for(let i = 0; i < searchHistory.length; i++){
-    let searchAgain = $('<button>').text(searchHistory[i]);
-    searchAgain.attr('class', 'btn prev-btns')
+    let searchAgain = $('<li>').text(searchHistory[i]);
+    searchAgain.attr('class', 'btn prev-btns');
     historyButtons.append(searchAgain);
   }
 });
+
 carouselImages.on('click', getArtCarousel);
 searchBtn.on('click', getArtworks);
 historyButtons.on('click', '.prev-btns', function(ev){
   userInput.val($(ev.target).text());
   getArtworks();
 });
+
+$('.dropdown-trigger').dropdown();
 

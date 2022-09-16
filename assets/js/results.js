@@ -1,5 +1,5 @@
 let userQuery = location.search.split('=').pop();
-let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view&limit=5`
+let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view&limit=5`;
 let artworkDisplay = $('#related-art');
 let artistBio = $('#artist-info');
    
@@ -26,16 +26,16 @@ let artistBio = $('#artist-info');
             let bioCard = $('<div>', {
                 class: 'card-panel col s12 m10 l10 push-m1 push-l1',
                 style: 'background-color: #b7cf84'
-            })
-            let artworkTitle = $('<p>').text(`Title: ${title}`)
+            });
+            let artworkTitle = $('<p>').text(`Title: ${title}`);
             let artworkLocation = $('<p>').text(`Displayed at: ${galTitle}`);
             let artworkID = results.data[i].image_id;
-            let artworkUrl = `https://www.artic.edu/iiif/2/${artworkID}/full/843,/0/default.jpg`
+            let artworkUrl = `https://www.artic.edu/iiif/2/${artworkID}/full/843,/0/default.jpg`;
             let resultImg = $('<img>', {
                 class: 'materialboxed img-center col s12 m6 l6',
                 width: '550',
                 src: `${artworkUrl}`
-            })
+            });
             bioCard.append(resultImg, artist, artworkTitle, artworkLocation);
             artworkDisplay.append(bioCard);
         }
