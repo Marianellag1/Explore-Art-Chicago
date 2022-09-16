@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-    /* background-color: #ef9a9a; */
 }
 
 .nav-wrapper {
@@ -25,12 +24,6 @@
     border:2px solid ;  
     box-shadow: 0 0 10px #333; 
 }
-
-/* .carousel {
-    border-style: solid;
-    border-radius: 50px;
-    border-color: #607d8b;
-} */
 
 .img-center { 
     margin: 10px auto;
