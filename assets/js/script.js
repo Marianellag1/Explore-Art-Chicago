@@ -35,11 +35,11 @@ function getArtCarousel(e){
   let imageName = $(e.target)[0].alt;
   location.assign('./results.html?' + `q=${imageName}`);
 }
-$(function(){
-  let searchHistory = JSON.parse(localStorage.getItem("userInput"));
-  console.log(searchHistory);
-  $('#usersearch').autocomplete({
-    source: searchHistory
+$(document).ready(function(){
+  let searchHistory = JSON.parse(localStorage.getItem('userInput'));
+  console.log(searchHistory)
+  $('input.autocomplete').autocomplete({
+    data: searchHistory
   });
 });
 carouselImages.on('click', getArtCarousel);
