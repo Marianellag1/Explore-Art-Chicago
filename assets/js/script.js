@@ -48,4 +48,6 @@ historyButtons.on('click', '.prev-btns', function(ev){
   userInput.val($(ev.target).text());
   getArtworks();
 });
+
 $('.dropdown-trigger').dropdown();
+
