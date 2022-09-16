@@ -1,7 +1,7 @@
 let userQuery = location.search.split('=').pop();
 let apiUrl = `https://api.artic.edu/api/v1/artworks/search?q=${userQuery}&fields=image_id,title,artist_display,gallery_title,on_loan_display,is_on_view&limit=3`
-let artworkDisplay = $('#artwork-container');
-let artistBio = $('#artist-info')
+let artworkDisplay = $('#related-art');
+let artistBio = $('#artist-info');
    
     fetch(apiUrl)
     .then(function (response) {
@@ -15,36 +15,38 @@ let artistBio = $('#artist-info')
             let galTitle = '';
             if(!results.data[i].is_on_view){
               if(results.data[i].on_loan_display !== null){
-                galTitle = (`${results.data[i].on_loan_display.split('<p>')[1].split('</p>')[0].split('for')[0]}`)  
+                galTitle = (`${results.data[i].on_loan_display.split('<p>')[1].split('</p>')[0].split('for')[0]}`);  
               }
               else{
-                galTitle = 'This artwork is not on display.'
+                galTitle = 'This artwork is not on display.';
               }  
             }
             else{
                 galTitle = results.data[i].gallery_title;
             }
             let bioCard = $('<div>', {
-                class: 'card-panel teal s12 m12 l12',
+                class: 'card-panel teal col s12 m12 l12',
                 style: 'background-color: #b7cf84!important'
             })
-            let artworkInfo = $('<span>').text(`Title: ${title}
-            Displayed at: ${galTitle}
-            `)
-            
-            bioCard.append(artist, artworkInfo);
-            artistBio.append(bioCard);
+            let artworkTitle = $('<p>').text(`Title: ${title}`)
+            let artworkLocation = $('<p>').text(`Displayed at: ${galTitle}`);
+            let artworkID = results.data[i].image_id;
+            let artworkUrl = `https://www.artic.edu/iiif/2/${artworkID}/full/843,/0/default.jpg`
+            let resultImg = $('<img>', {
+                class: 'materialboxed img-center col s12 m6 l6',
+                width: '550',
+                src: `${artworkUrl}`
+            })
+            bioCard.append(resultImg, artist, artworkTitle, artworkLocation);
+            artworkDisplay.append(bioCard);
         }
     })
 console.log(apiUrl);
 
-$(document).ready(function () {
+// $(document).ready(function () {
+//     $('.materialboxed').materialbox();
+// });
+
+artworkDisplay.on('click', '.materialboxed',function(){
     $('.materialboxed').materialbox();
-});
-
-
-// document.addEventListener("click",function(){
-//     alert("it works");
-//     var goBack = document.getElementById("back-btn");
-//     window.history.back()
-// })
+})
