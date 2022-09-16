@@ -22,7 +22,9 @@ function getArtworks(event) {
   event.preventDefault();
   let userSearch = userInput.val();
   let prevSearch = JSON.parse(localStorage.getItem("userInput")) || [];
-  prevSearch.push(userInput.val());
+  if(!prevSearch.includes(userInput.val())){
+    prevSearch.push(userInput.val());
+  }
   localStorage.setItem("userInput", JSON.stringify(prevSearch));
   location.assign('./results.html?' + `q=${userSearch}`)
   userInput.val("");
