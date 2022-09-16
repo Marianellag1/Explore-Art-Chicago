@@ -38,7 +38,7 @@ $(document).ready(function(){
   let searchHistory = JSON.parse(localStorage.getItem('userInput'));
   console.log(searchHistory)
   for(let i = 0; i < searchHistory.length; i++){
-    let searchAgain = $('<button>').text(searchHistory[i]);
+    let searchAgain = $('<p>').text(searchHistory[i]);
     searchAgain.attr('class', 'btn prev-btns')
     historyButtons.append(searchAgain);
   }
@@ -51,3 +51,4 @@ historyButtons.on('click', '.prev-btns', function(ev){
   getArtworks();
 });
 
+$('.dropdown-trigger').dropdown();
