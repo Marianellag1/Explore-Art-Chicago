@@ -15,11 +15,10 @@ $(document).ready(function () {
 
 let searchBtn = $('#search-button');
 let userInput = $('#usersearch');
+let carouselImages = $('.carousel');
+let historyButtons = $('#historyBtns');
 
-let carouselImages = $('.carousel')
-
-function getArtworks(event) {
-  event.preventDefault();
+function getArtworks() {
   let userSearch = userInput.val();
   let prevSearch = JSON.parse(localStorage.getItem("userInput")) || [];
   if(!prevSearch.includes(userInput.val())){
@@ -38,10 +37,17 @@ function getArtCarousel(e){
 $(document).ready(function(){
   let searchHistory = JSON.parse(localStorage.getItem('userInput'));
   console.log(searchHistory)
-  $('input.autocomplete').autocomplete({
-    data: searchHistory
-  });
+  for(let i = 0; i < searchHistory.length; i++){
+    let searchAgain = $('<button>').text(searchHistory[i]);
+    searchAgain.attr('class', 'btn prev-btns')
+    historyButtons.append(searchAgain);
+  }
 });
 carouselImages.on('click', getArtCarousel);
 searchBtn.on('click', getArtworks);
+historyButtons.on('click', '.prev-btns', function(ev){
+  console.log('hello');
+  userInput.val($(ev.target).text());
+  getArtworks();
+});
 
